@@ -15,6 +15,8 @@ public:
 	char* getData() {
 		return m_pszData;
 	}
+	void setData(char* pParam);
+
 private:
 	char* m_pszData;
 };
