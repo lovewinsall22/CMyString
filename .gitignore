@@ -1,11 +1,35 @@
+# =====================
 # Visual Studio
+# =====================
 .vs/
 *.user
 *.suo
 *.vcxproj.user
 
+# =====================
 # Build output
+# =====================
 Debug/
 Release/
 x64/
 x86/
+*/Debug/
+*/Release/
+*/x64/
+*/x86/
+
+# =====================
+# C/C++ build files
+# =====================
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.idb
+*.log
+*.tlog
+
+# =====================
+# Cache / temp
+# =====================
+ipch/
