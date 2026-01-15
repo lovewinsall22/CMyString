@@ -1,7 +1,11 @@
 ﻿#include <iostream>
+#include "CMyString.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    CMyString hello;
+    hello.setData("hello");
+    return 0;
+
 }
 
