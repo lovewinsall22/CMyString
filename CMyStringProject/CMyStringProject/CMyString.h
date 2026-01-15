@@ -11,6 +11,10 @@ public:
 	~CMyString() {
 		cout << "~CMyString()" << endl;
 	}
+
+	char* getData() {
+		return m_pszData;
+	}
 private:
 	char* m_pszData;
 };
