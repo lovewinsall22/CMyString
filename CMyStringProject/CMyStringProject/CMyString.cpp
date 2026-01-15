@@ -10,7 +10,7 @@ CMyString::~CMyString() {
 	cout << "~CMyString()" << endl;
 }
 
-void CMyString::setData(char* pParam)
+void CMyString::setData(const char* pParam)
 {
 	size_t length = strlen(pParam);
 	m_pszData = new char[length + 1];

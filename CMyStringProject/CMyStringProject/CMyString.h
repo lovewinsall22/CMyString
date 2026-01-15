@@ -3,13 +3,13 @@
 class CMyString
 {
 public:
-	CMyString()
-		~CMyString();
+	CMyString();
+	~CMyString();
 
 	char* getData() {
 		return m_pszData;
 	}
-	void setData(char* pParam);
+	void setData(const char* pParam);
 
 private:
 	char* m_pszData;
