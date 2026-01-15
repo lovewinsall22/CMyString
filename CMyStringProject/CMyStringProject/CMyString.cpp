@@ -8,10 +8,13 @@ CMyString::CMyString() : m_pszData(nullptr) {
 }
 CMyString::~CMyString() {
 	cout << "~CMyString()" << endl;
+	delete[] m_pszData;
 }
 
 void CMyString::setData(const char* pParam)
 {
+	if (m_pszData != nullptr)
+		delete[] m_pszData;
 	size_t length = strlen(pParam);
 	m_pszData = new char[length + 1];
 
