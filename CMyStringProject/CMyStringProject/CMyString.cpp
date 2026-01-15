@@ -3,10 +3,10 @@
 
 using namespace std;
 
-CMyString() : m_pszData(nullptr) {
+CMyString::CMyString() : m_pszData(nullptr) {
 	cout << "CMyString()" << endl;
 }
-~CMyString() {
+CMyString::~CMyString() {
 	cout << "~CMyString()" << endl;
 }
 
