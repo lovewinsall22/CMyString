@@ -11,6 +11,11 @@ CMyString::~CMyString() {
 	delete[] m_pszData;
 }
 
+char* CMyString::getData()
+{
+	return m_pszData;
+}
+
 void CMyString::setData(const char* pParam)
 {
 	if (m_pszData != nullptr)
