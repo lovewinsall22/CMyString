@@ -11,12 +11,12 @@ CMyString::~CMyString() {
 	delete[] m_pszData;
 }
 
-size_t CMyString::getLength()
+const size_t CMyString::getLength() const
 {
 	return this->length;
 }
 
-char* CMyString::getData()
+const char* CMyString::getData() const
 {
 	return m_pszData;
 }

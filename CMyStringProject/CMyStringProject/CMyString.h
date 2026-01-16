@@ -6,9 +6,9 @@ public:
 	CMyString();
 	~CMyString();
 
-	size_t getLength();
+	const size_t getLength() const;
 
-	char* getData();
+	const char* getData() const;
 	void setData(const char* pParam);
 
 private:
