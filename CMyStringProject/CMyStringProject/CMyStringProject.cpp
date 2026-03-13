@@ -1,21 +1,21 @@
 ﻿#include <iostream>
 #include "CMyString.h"
 
+CMyString getHello()
+{
+    CMyString hello;
+    hello.setData("hello");
+    return hello; // 임시객체 생성
+}
+
 int main()
 {
-    CMyString hello("hello");
-    //std::cout << hello.getData() << std::endl;
-    std::cout << hello << std::endl;
+    CMyString result; // 객체생성
+    result = ::getHello(); // 반환되는 임시객체로 인해 이동대입연산자 실행
+    std::cout << result << std::endl;
 
-    CMyString world(hello); // 복사생성자 호출
-    //std::cout << world.getData() << std::endl;
-    std::cout << world << std::endl;
+    CMyString test(std::move(::getHello())); // 이동 생성자로 객체 생성
 
-    //CMyString everyone = world; // == everyone(world);
-    CMyString everyone;
-    everyone = world;
-    //std::cout << everyone.getData() << std::endl;
-    std::cout << everyone << std::endl;
     return 0;
 
 }
