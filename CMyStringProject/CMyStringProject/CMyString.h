@@ -9,6 +9,10 @@ public:
 
 	void operator=(const CMyString& rhs); // 딮카피를 위한 단순대입연산자 재정의
 
+	operator const char* () {
+		return m_pszData;
+	}
+
 	const size_t getLength() const;
 
 	const char* getData() const;
