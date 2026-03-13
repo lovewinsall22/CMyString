@@ -16,6 +16,12 @@ CMyString::~CMyString() {
 	delete[] m_pszData;
 }
 
+void CMyString::operator=(const CMyString& rhs)
+{
+	cout << "CMyString::Operator=(const CMyString& rhs)" << endl;
+	this->setData(rhs.getData());
+}
+
 const size_t CMyString::getLength() const
 {
 	return this->length;
