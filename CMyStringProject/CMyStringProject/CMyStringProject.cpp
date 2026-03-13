@@ -3,8 +3,7 @@
 
 int main()
 {
-    CMyString hello;
-    hello.setData("hello");
+    CMyString hello("hello");
     //std::cout << hello.getData() << std::endl;
     std::cout << hello << std::endl;
 

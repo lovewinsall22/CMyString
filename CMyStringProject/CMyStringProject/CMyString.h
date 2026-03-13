@@ -4,6 +4,7 @@ class CMyString
 {
 public:
 	CMyString();
+	explicit CMyString(const char* param); // 묵시적변환을 막는 변환생성자
 	CMyString(const CMyString& rhs); // 딮카피를 위한 복사생성자
 	~CMyString();
 

@@ -6,6 +6,10 @@ using namespace std;
 CMyString::CMyString() : m_pszData(nullptr), length(0) {
 	cout << "CMyString()" << endl;
 }
+CMyString::CMyString(const char* param) {
+	cout << "CMyString(const char*)" << endl;
+	this->setData(param);
+}
 CMyString::CMyString(const CMyString& rhs) {
 	cout << "CMyString(const CMyString& rhs)" << endl;
 	this->setData(rhs.getData()); // 복사생성자의 딮카피 코드 => setData가 내부적으로 동적할당코드
