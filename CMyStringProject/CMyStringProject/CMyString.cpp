@@ -51,6 +51,7 @@ void CMyString::setData(const char* pParam)
 {
 	if (m_pszData != nullptr) // 이미 값이 채워져있다면
 		delete[] m_pszData; // 비워줘야함
+
 	size_t length = strlen(pParam); // 넘어온 값 길이 체크
 	m_pszData = new char[length + 1]; // 널문자까지의 길이로 할당
 
