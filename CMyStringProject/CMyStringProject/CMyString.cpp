@@ -104,3 +104,10 @@ CMyString operator+(const char* pLeft, const CMyString& rhs)
 	result.append(rhs.getData());
 	return result;
 }
+
+CMyString& CMyString::operator+=(const char* pParam)
+{
+	this->append(pParam);
+
+	return *this;
+}
