@@ -13,12 +13,9 @@ int main()
     CMyString hello("hello ");
     CMyString world("world");
 
-    CMyString Res(hello + world);
-    std::cout << Res.getLength() << std::endl;
-    std::cout << Res[-1] << std::endl;
-    std::cout << Res[11] << std::endl;
-    std::cout << Res[0] << std::endl;
-    std::cout << Res[10] << std::endl;
+    std::cout << hello + world << std::endl; // + 오퍼레이터 오버로딩으로 정의
+    std::cout << hello + "world" << std::endl; // 
+    std::cout << "hello " + world << std::endl; // friend 함수로 정의
     return 0;
 
 }

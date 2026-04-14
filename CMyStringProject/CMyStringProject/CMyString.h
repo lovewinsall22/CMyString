@@ -16,6 +16,7 @@ public:
 		return m_pszData;
 	}
 	CMyString operator+(const CMyString& rhs);
+	CMyString operator+(const char* pParam);
 	size_t append(const char* pParam);
 	CMyString& operator+=(const char* pParam);
 	CMyString& operator+=(const CMyString& rhs);

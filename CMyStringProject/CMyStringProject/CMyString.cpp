@@ -48,6 +48,13 @@ CMyString CMyString::operator+(const CMyString& rhs)
 	return result;
 }
 
+CMyString CMyString::operator+(const char* pParam)
+{
+	CMyString result(this->m_pszData);
+	result.append(pParam);
+	return result;
+}
+
 const size_t CMyString::getLength() const
 {
 	return this->length;
