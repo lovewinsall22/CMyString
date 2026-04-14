@@ -14,6 +14,8 @@ public:
 	operator const char* () { // cout이 클래스에 대한 호환성을 가지게 되는 operator
 		return m_pszData;
 	}
+	CMyString operator+(const CMyString& rhs);
+	size_t append(const char* pParam);
 
 	const size_t getLength() const;
 

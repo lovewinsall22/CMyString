@@ -37,6 +37,13 @@ void CMyString::operator=(CMyString&& rhs) noexcept
 	rhs.m_pszData = nullptr;
 }
 
+CMyString CMyString::operator+(const CMyString& rhs)
+{	
+	CMyString result(this->m_pszData);
+	result.append(rhs.m_pszData);
+	return result;
+}
+
 const size_t CMyString::getLength() const
 {
 	return this->length;
@@ -58,3 +65,30 @@ void CMyString::setData(const char* pParam)
 	strcpy_s(m_pszData, length + 1, pParam); // 스트링카피
 	this->length = length; // 길이 최신화
 }
+
+size_t CMyString::append(const char* pParam)
+{
+	if (pParam == nullptr)
+		return -1;
+
+	if (this->m_pszData == nullptr)
+	{
+		this->setData(pParam);
+		return strlen(pParam);
+	}
+	else
+	{
+		size_t pParamLen = strlen(pParam);
+		char* appendResult = new char[length + pParamLen + 1];
+
+		strcpy_s(appendResult, length + pParamLen + 1, this->m_pszData);
+		strcat_s(appendResult + length, pParamLen + 1, pParam);
+
+		delete[] this->m_pszData;
+		m_pszData = appendResult;
+		return strlen(appendResult);
+	}
+
+	return 0;
+}
+
