@@ -9,8 +9,8 @@ public:
 	CMyString(CMyString&& rhs) noexcept; // 임시객체 상수형 참조를 위한 이동생성자
 	~CMyString();
 
-	void operator=(const CMyString& rhs); // 딮카피를 위한 단순대입연산자 재정의
-	void operator=(CMyString&& rhs) noexcept; // 이동생성자의 세트인 이동대입연산자 재정의
+	CMyString& operator=(const CMyString& rhs); // 딮카피를 위한 단순대입연산자 재정의
+	CMyString& operator=(CMyString&& rhs) noexcept; // 이동생성자의 세트인 이동대입연산자 재정의
 	operator const char* () { // cout이 클래스에 대한 호환성을 가지게 되는 operator
 		return m_pszData;
 	}

@@ -25,16 +25,20 @@ CMyString::~CMyString() {
 	delete[] m_pszData;
 }
 
-void CMyString::operator=(const CMyString& rhs)
+CMyString& CMyString::operator=(const CMyString& rhs)
 {
 	cout << "CMyString::Operator=(const CMyString& rhs)" << endl;
 	this->setData(rhs.getData());
+
+	return *this;
 }
-void CMyString::operator=(CMyString&& rhs) noexcept
+CMyString& CMyString::operator=(CMyString&& rhs) noexcept
 {
 	cout << "CMyString::Operator=(CMyString&& rhs) - move" << endl;
 	this->m_pszData = rhs.m_pszData; // shallow copy
 	rhs.m_pszData = nullptr;
+
+	return *this;
 }
 
 CMyString CMyString::operator+(const CMyString& rhs)
