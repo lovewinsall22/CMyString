@@ -21,6 +21,7 @@ int main()
 
     CMyString result(hello + world);
     std::cout << result << std::endl;
+    std::cout << "bye " + world << std::endl;
     return 0;
 
 }

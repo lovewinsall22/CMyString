@@ -27,3 +27,4 @@ private:
 	size_t length;
 };
 
+CMyString operator+(const char* pLeft, const CMyString& rhs);
