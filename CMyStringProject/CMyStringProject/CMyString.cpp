@@ -101,7 +101,7 @@ size_t CMyString::append(const char* pParam)
 CMyString operator+(const char* pLeft, const CMyString& rhs)
 {
 	CMyString result(pLeft);
-	result.append(rhs.getData());
+	result.append(rhs.m_pszData);
 	return result;
 }
 

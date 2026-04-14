@@ -2,6 +2,7 @@
 
 class CMyString
 {
+	friend CMyString operator+(const char* pLeft, const CMyString& rhs);
 public:
 	CMyString(); // 기본생성자
 	explicit CMyString(const char* param); // 묵시적변환을 막는 변환생성자
@@ -29,4 +30,3 @@ private:
 	size_t length;
 };
 
-CMyString operator+(const char* pLeft, const CMyString& rhs);
