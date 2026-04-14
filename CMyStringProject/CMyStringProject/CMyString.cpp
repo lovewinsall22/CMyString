@@ -89,7 +89,9 @@ size_t CMyString::append(const char* pParam)
 		strcat_s(appendResult + length, pParamLen + 1, pParam);
 
 		delete[] this->m_pszData;
-		m_pszData = appendResult;
+		this->m_pszData = appendResult;
+		this->length = strlen(appendResult);
+
 		return strlen(appendResult);
 	}
 
