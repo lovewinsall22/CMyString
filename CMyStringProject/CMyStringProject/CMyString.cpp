@@ -118,3 +118,11 @@ CMyString& CMyString::operator+=(const CMyString& rhs)
 
 	return *this;
 }
+
+char CMyString::operator[](const int index)
+{
+	if (index < 0 || this->length <= index)
+		return 0;
+	else
+		return this->m_pszData[index];
+}

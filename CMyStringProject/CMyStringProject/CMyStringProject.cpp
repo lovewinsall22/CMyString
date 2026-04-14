@@ -13,7 +13,12 @@ int main()
     CMyString hello("hello ");
     CMyString world("world");
 
-
+    CMyString Res(hello + world);
+    std::cout << Res.getLength() << std::endl;
+    std::cout << Res[-1] << std::endl;
+    std::cout << Res[11] << std::endl;
+    std::cout << Res[0] << std::endl;
+    std::cout << Res[10] << std::endl;
     return 0;
 
 }
