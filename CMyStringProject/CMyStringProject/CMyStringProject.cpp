@@ -25,7 +25,9 @@ int main()
 
     std::cout << "+=+=+=+=+=" << std::endl;
     result += "!!!!";
-    //result.operator+=("!!!!");
+
+    CMyString a("????");
+    result += a;
     std::cout << result << std::endl;
 
     return 0;

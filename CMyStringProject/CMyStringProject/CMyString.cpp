@@ -111,3 +111,10 @@ CMyString& CMyString::operator+=(const char* pParam)
 
 	return *this;
 }
+
+CMyString& CMyString::operator+=(const CMyString& rhs)
+{
+	this->append(rhs.getData());
+
+	return *this;
+}

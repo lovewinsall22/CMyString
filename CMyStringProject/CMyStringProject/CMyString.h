@@ -17,6 +17,7 @@ public:
 	CMyString operator+(const CMyString& rhs);
 	size_t append(const char* pParam);
 	CMyString& operator+=(const char* pParam);
+	CMyString& operator+=(const CMyString& rhs);
 	const size_t getLength() const;
 
 	const char* getData() const;
