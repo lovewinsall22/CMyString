@@ -67,6 +67,9 @@ const char* CMyString::getData() const
 
 void CMyString::setData(const char* pParam)
 {
+	if (pParam == nullptr)
+		return;
+
 	if (m_pszData != nullptr) // 이미 값이 채워져있다면
 		delete[] m_pszData; // 비워줘야함
 

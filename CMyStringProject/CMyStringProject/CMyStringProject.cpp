@@ -18,9 +18,17 @@ int main()
     //std::cout << hello + "world" << std::endl; // 
     //std::cout << "hello " + world << std::endl; // friend 함수로 정의
 
-    CMyStringEx Ex;
-    Ex.setData("BYE");
-    std::cout << Ex << std::endl;
+
+    CMyString a;
+    CMyString b("BBB");
+    CMyString c(b);
+    CMyString d = b;
+
+    //std::cout << a << std::endl;
+    std::cout << b << std::endl;
+    std::cout << c << std::endl;
+    std::cout << d << std::endl;
+
     return 0;
 
 }
