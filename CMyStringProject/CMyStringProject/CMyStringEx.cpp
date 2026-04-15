@@ -8,6 +8,11 @@ CMyStringEx::CMyStringEx()
 	cout << "CMyStringEx()" << endl;
 }
 
+CMyStringEx::CMyStringEx(const char* param) {
+	cout << "CMyStringEx(const char*)" << endl;
+	this->setData(param);
+}
+
 CMyStringEx::~CMyStringEx()
 {
 	cout << "~CMyStringEx()" << endl;
