@@ -17,7 +17,7 @@ void CMyStringEx::setData(const char* pParam)
 {
 	if (pParam != nullptr)
 	{
-		if (pParam == "BYE")
+		if (strcmp(pParam,"BYE") == 0)
 		{
 			CMyString::setData("BYE CANCELED");
 			return;
