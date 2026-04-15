@@ -8,6 +8,7 @@ public:
 	explicit CMyStringEx(const char* param);
 	~CMyStringEx();
 	
-	void setData(const char* pParam);
+	//void setData(const char* pParam);
+	virtual void onSetData(const char*& pParam);
 };
 

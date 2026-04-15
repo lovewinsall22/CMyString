@@ -26,6 +26,7 @@ public:
 
 	const char* getData() const;
 	void setData(const char* pParam);
+	virtual void onSetData(const char*& pParam) {}
 
 private:
 	char* m_pszData;
